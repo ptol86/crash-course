@@ -5,13 +5,12 @@ pipeline {
         stage('Test') {
             steps {
                 checkout scm
-
             }
         }
         stage('Build') {
             steps {
-            echo "Zaebalooooooo"
-              sh "docker-compose -f ./docker-compose.yml up --build"
+                echo "Zaebalooooooo"
+                bat "docker-compose -f ./docker-compose.yml up --build"
             }
         }
         stage('Deploy') {
