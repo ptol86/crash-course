@@ -9,13 +9,14 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo "Zaebalooooooo"
+                echo "build started"
                 bat "docker-compose -f ./docker-compose.yml up --build -d"
+                echo "build finished"
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deployingadasd....'
+                echo 'Deploy'
             }
         }
     }
